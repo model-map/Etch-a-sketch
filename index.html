@@ -10,14 +10,20 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Etch-a-Sketch</h1>
-    <div class="container" oncontextmenu="event.preventDefault();"> 
-        <!-- Add grid here via JS -->
+    <div class="header">
+        <h1>Etch-a-Sketch</h1>
     </div>
-    <h3>Select Canvas size</h3>
-    <input type="range" min="0" max="4" step="1" id="slider">
-    <input data-jscolor="{}" value="#3399FF80">
-    <h4>Canvas size: <span id="slidervalue">4x4</span></h4>
+    <div class="mainArea">
+        <div class="container" oncontextmenu="event.preventDefault();">
+            <!-- Add grid here via JS -->
+        </div>
+        <div class="canvas-settings">
+            <input type="range" min="0" max="4" step="1" id="slider">
+            <h3>Select Canvas size</h3>
+            <input data-jscolor="{}" value="#3399FF80">
+            <h4>Canvas size: <span id="slidervalue">4x4</span></h4>
+        </div>
+    </div>
     <div class="easteregg"></div>
 </body>
 </html>
