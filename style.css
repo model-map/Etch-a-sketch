@@ -70,3 +70,14 @@ a {
 body{
     background-color: #3b3b3b;
 }
+
+.container{
+    display:grid;
+    height: 250px;
+    width:250px;
+}
+
+.gridChild{
+    border: 1px solid black;
+    opacity: 25%;
+}
