@@ -7,7 +7,6 @@ createGrid(4);
 slider.addEventListener('change',(e)=>{
     const value=canvasSize[parseInt(e.target.value)];
     slidervalue.textContent=`${value}x${value}`;
-    console.log("value: ",value);
     destroyGrid();
     createGrid(value);
 });
@@ -15,7 +14,8 @@ slider.addEventListener('change',(e)=>{
 function destroyGrid(){
     const children=document.querySelectorAll('.gridChild');
     if (children){
-        children.forEach((child)=>container.removeChild(child))};
+        children.forEach((child)=>container.removeChild(child))
+    };
 }
 
 function createGrid(value){
@@ -28,4 +28,35 @@ function createGrid(value){
 }
 
 // COLOURING GRID ELEMENTS
+const body=document.querySelector('body');
+const gridChildren=document.querySelectorAll('.gridChild');
 
+gridChildren.forEach((child)=>{
+    child.addEventListener('mouseover',()=>{
+        child.style['cursor']="pointer";
+    });
+
+    child.addEventListener('mouseup',(e)=>{
+        console.log("BUTTON ",e.button);
+        switch(e.button){
+            case 0:
+                child.classList.add("gridChild--colored");
+                child.style['background-color']=`hsl(${colorRandomise()})`;
+                break;
+
+            case 2:
+                child.classList.remove("gridChild--colored");
+                child.style['background-color']=`${body.style['background-color']}`;
+                break;
+        }
+    })
+
+})
+
+function colorRandomise(){
+    const hue=Math.floor(Math.random()*360);
+    const saturation=Math.floor(Math.random()*100);
+    const lightness=Math.floor(Math.random()*100);
+    const color=`${hue},${saturation}%,${lightness}%`;
+    return color;
+}
