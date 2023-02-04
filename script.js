@@ -26,3 +26,6 @@ function createGrid(value){
         container.style['grid-template-columns']=`repeat(${value},1fr)`;
     }
 }
+
+// COLOURING GRID ELEMENTS
+
