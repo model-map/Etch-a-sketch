@@ -28,6 +28,15 @@ function createGrid(value){
     colorGrid();
 }
 
+// COLOR PICKER
+
+const colorPicker=document.querySelector('[data-jscolor]');
+let color= colorPicker.value;
+
+colorPicker.addEventListener('change',()=>{
+    color=colorPicker.value;
+})
+
 // COLOURING GRID ELEMENTS
 const body=document.querySelector('body');
 
@@ -39,11 +48,10 @@ function colorGrid(){
         });
     
         child.addEventListener('mouseup',(e)=>{
-            console.log("BUTTON ",e.button);
             switch(e.button){
                 case 0:
                     child.classList.add("gridChild--colored");
-                    child.style['background-color']=`hsl(${colorRandomise()})`;
+                    child.style['background-color']=`${color}`;
                     break;
     
                 case 2:
@@ -56,6 +64,8 @@ function colorGrid(){
     })
 }
 
+// ADD EASTER EGG
+
 function colorRandomise(){
     const hue=Math.floor(Math.random()*360);
     const saturation=Math.floor(Math.random()*100);
@@ -64,7 +74,6 @@ function colorRandomise(){
     return color;
 }
 
-// ADD EASTER EGG
 function bgColor(){
     const elements=document.querySelectorAll('h3, h1, h4');
     body.style['background-color']=`hsl(${colorRandomise()})`;
