@@ -2,7 +2,9 @@ const container=document.querySelector('.container');
 const slider=document.querySelector('#slider');
 const slidervalue=document.querySelector('#slidervalue');
 const canvasSize=[4,8,16,32,64];
+
 createGrid(4);
+slider.value=0;
 
 slider.addEventListener('change',(e)=>{
     const value=canvasSize[parseInt(e.target.value)];
