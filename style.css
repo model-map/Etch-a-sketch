@@ -65,21 +65,28 @@ a {
 
 }
 
+/* Flexboxes and grids */
+
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* start */
 
 body{
-/*     background-color: #3b3b3b; */
+    background-color: #3b3b3b;
+    height: 100vh;
+    width: 100vw;
 }
 
 .container{
     display:grid;
-    height: 250px;
-    width:250px;
+    height:65vh;
+    width:65vh;
 }
 
 .gridChild{
     border: 1px solid rgba(0, 0, 0, 0.25);
-}
-
-.gridChild--colored{
 }
