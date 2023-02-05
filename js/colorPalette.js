@@ -264,7 +264,7 @@ const colorPaletteArray = [
 ///////////////////////////////////////////////
 
 const colorPalette=document.querySelector('.colorPalette');
-let color='#f00';
+let color='#FF1493'; // To color grid using functions in script.js
 
 createPaletteGrid();
 
@@ -284,10 +284,14 @@ function createPaletteGrid(){
 }
 
 // COLOUR PICKER
-let colorPickedTrigger=false;
+let pickedColor=document.getElementById("#FF1493"); // To highlight selected color in palette
 const colors=document.querySelectorAll('.color');
 colors.forEach((colorDiv)=>{
     colorDiv.addEventListener("click",()=>{
         color=colorDiv.id;
+        pickedColor.style['border']=`1px solid rgba(0,0,0,0.25)`;
+        colorDiv.style['border']=`1px solid rgba(0,0,0,1)`;
+        pickedColor=colorDiv;
+
     })
 })

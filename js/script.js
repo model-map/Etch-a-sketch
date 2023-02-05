@@ -84,9 +84,29 @@ slider.addEventListener('change',(e)=>{
 
 // CLEAR button
 
-const clear=document.querySelector('.clearButton');
-clear.addEventListener("click",()=>{
+const clearButton=document.querySelector('.clearButton');
+clearButton.addEventListener("click",()=>{
     gridChildren.forEach((child)=>{
         child.style['background-color']=`transparent`;
     })
+});
+
+// Grid button
+let gridTrigger=false;
+const gridButton= document.querySelector('.gridButton');
+gridButton.addEventListener("click",()=>{
+    if (gridTrigger==true){
+        gridTrigger=false;
+        gridButton.style['background-color']="white";
+        gridChildren.forEach((child)=>{
+            child.style['border']=`1px solid rgba(255, 255, 255, 0.5)`;
+        })
+    }
+    else{
+        gridButton.style['background-color']="#777";
+        gridTrigger=true;
+        gridChildren.forEach((child)=>{
+            child.style['border']="none";
+        })
+    }
 })
