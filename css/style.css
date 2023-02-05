@@ -78,12 +78,15 @@ body{
         background-color: #222222;
     }
 
+    .clearButton,
+    .gridButton{
+        border-radius: 10%;
+        align-self: center;
+        padding: 5px 10px;
+    }
+    
     .clearButton{
         background-color: #ff315a;
-        border-radius: 10%;
-        width: 3vw;
-        height: 3vh;
-        align-self: center;
     }
 
     .mainArea{

@@ -284,7 +284,7 @@ function createPaletteGrid(){
 }
 
 // COLOUR PICKER
-
+let colorPickedTrigger=false;
 const colors=document.querySelectorAll('.color');
 colors.forEach((colorDiv)=>{
     colorDiv.addEventListener("click",()=>{
