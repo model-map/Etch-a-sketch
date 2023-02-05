@@ -78,6 +78,32 @@ body{
         border: 1px solid blue;
     }
 
+/* HEIGHTS AND WIDTHS */
+
+body,
+.header,
+.mainArea,
+.footer{
+    width: 100vw;
+}
+
+body{
+    height: 100vh;
+}
+
+.header{
+    height: 10vh;
+}
+
+.footer{
+    height: 10vh;
+}
+
+.container{
+    height: 60vh;
+    width: 60vh;
+}
+
 /* ADD EASTER EGG */
 
 .easteregg{
@@ -87,3 +113,4 @@ body{
     margin-top:auto;
     margin-left:auto;
 }
+

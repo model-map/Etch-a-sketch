@@ -245,6 +245,11 @@ const colorPaletteArray = [
     ['#FFFFFF', 'White']
 ];
 
+///////////////////////////////////////////////
+
+const colorPalette=document.querySelector('.colorPalette');
+let color='#f00';
+
 createPaletteGrid();
 
 function createPaletteGrid(){
@@ -261,3 +266,12 @@ function createPaletteGrid(){
         colorPalette.appendChild(div);
     }
 }
+
+// COLOUR PICKER
+
+const colors=document.querySelectorAll('.color');
+colors.forEach((colorDiv)=>{
+    colorDiv.addEventListener("click",()=>{
+        color=colorDiv.id;
+    })
+})
