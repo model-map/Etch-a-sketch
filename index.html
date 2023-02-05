@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
-    <script src="./script.js" defer></script>
-    <script src="./jscolor.js" defer></script>
-    <link rel="stylesheet" href="./style.css">
+    <!-- STYLESHEETS-->
+    <link rel="stylesheet" href="./css/style.css" defer>
 </head>
 <body>
     <div class="header">
@@ -17,13 +16,23 @@
         <div class="container" oncontextmenu="event.preventDefault();">
             <!-- Add grid here via JS -->
         </div>
-        <div class="canvas-settings">
-            <input type="range" min="0" max="4" step="1" id="slider">
-            <h3>Select Canvas size</h3>
-            <input data-jscolor="{}" value="#3399FF80">
-            <h4>Canvas size: <span id="slidervalue">4x4</span></h4>
+        <div class="sidebar">
+            <div class="canvas-settings">
+                <input data-jscolor="{}" value="#3399FF80">
+                <input type="range" min="0" max="4" step="1" id="slider">
+                <h3>Select Canvas size</h3>
+                <h4>Canvas size: <span id="slidervalue">4x4</span></h4>
+            </div>
         </div>
     </div>
-    <div class="easteregg"></div>
+    <div class="footer">
+        <div class="easteregg"></div>
+    </div>
 </body>
+    <!-- SCRIPTS-->
+    <script src="./js/declaration.js" defer></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/jscolor.js" defer></script>
+    <script src="./js/heightsAndwidths.js" defer></script>
+    <script src="./js/easteregg.js" defer></script>
 </html>

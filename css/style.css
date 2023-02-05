@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* FLEXBOXES */
+
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mainArea{
+        display:flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+        .container{
+            display:grid;
+        }
+
+        .sidebar{
+            align-self:stretch;
+            display:flex;
+        }
+
+            .canvas-settings{
+                display:flex;
+                flex-direction: column;
+                align-self: center;
+                justify-self: center;
+            }
+
+/* DECORATIONS */
+
+body{
+    font-family: 'Press Start 2P';
+    background-color: #241f31;
+    color: rgb(205, 205, 6);
+}
+
+    .header{
+        background-color: #171421;
+    }
+
+    .mainArea{
+        margin: auto;
+        gap: 2em;
+    }
+
+        .container{
+            margin-right:auto;
+        }
+
+            .gridChild{
+                border: 1px solid rgba(255, 255, 255, 0.25);
+            }
+
+        .sidebar{
+            background-color: #171421;
+            border-radius: 2.5%;
+            margin-right:auto;
+        }
+
+    .footer{
+        border: 1px solid blue;
+    }
+
+/* ADD EASTER EGG */
+
+.easteregg{
+    height:1vh;
+    width:1vh;
+    background-color: blueviolet;
+    margin-top:auto;
+    margin-left:auto;
+}
