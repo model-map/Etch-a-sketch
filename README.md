@@ -5,6 +5,7 @@ https://htmlpreview.github.io/?https://github.com/model-map/Etch-a-sketch/blob/m
 
 Credits:
 
-    - Colorpicker:
+    - Color Palette
 
-        - https://jscolor.com
+        - https://en.wikipedia.org/wiki/List_of_colors:_A%E2%80%93F
+        - https://wikitable2csv.ggor.de/
