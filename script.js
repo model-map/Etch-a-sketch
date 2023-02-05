@@ -32,7 +32,6 @@ function createGrid(value){
 
 const colorPicker=document.querySelector('[data-jscolor]');
 let color= colorPicker.value;
-let trigger=false;
 
 colorPicker.addEventListener('change',()=>{
     color=colorPicker.value;
@@ -49,7 +48,6 @@ function colorGrid(){
         child.addEventListener('mousedown',(e)=>{
             mouseButton=e.button;
             colorPixel(child,mouseButton);
-            trigger=true;
         });
 
         child.addEventListener('mouseup',(e)=>{
@@ -57,8 +55,8 @@ function colorGrid(){
         });
 
         child.addEventListener('mouseover',(e)=>{
-            child.style['cursor']="pointer";
-            colorPixel(child,mouseButton);
+            child.style['cursor']="cell";
+            if (mouseButton!=null) colorPixel(child,mouseButton);
         });
 
 
