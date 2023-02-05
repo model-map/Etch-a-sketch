@@ -32,6 +32,7 @@ function createGrid(value){
 
 const colorPicker=document.querySelector('[data-jscolor]');
 let color= colorPicker.value;
+let trigger=false;
 
 colorPicker.addEventListener('change',()=>{
     color=colorPicker.value;
@@ -41,14 +42,30 @@ colorPicker.addEventListener('change',()=>{
 const body=document.querySelector('body');
 
 function colorGrid(){
+    let mouseButton=null;
     gridChildren=document.querySelectorAll('.gridChild');
     gridChildren.forEach((child)=>{
-        child.addEventListener('mouseover',()=>{
-            child.style['cursor']="pointer";
-        });
     
+        child.addEventListener('mousedown',(e)=>{
+            mouseButton=e.button;
+            colorPixel(child,mouseButton);
+            trigger=true;
+        });
+
         child.addEventListener('mouseup',(e)=>{
-            switch(e.button){
+            mouseButton=null;
+        });
+
+        child.addEventListener('mouseover',(e)=>{
+            child.style['cursor']="pointer";
+            colorPixel(child,mouseButton);
+        });
+
+
+        function colorPixel(child,mouseButton){
+            switch(mouseButton){
+                case null:
+                    break;
                 case 0:
                     child.classList.add("gridChild--colored");
                     child.style['background-color']=`${color}`;
@@ -59,9 +76,11 @@ function colorGrid(){
                     child.style['background-color']=`${body.style['background-color']}`;
                     break;
             }
-        })
-    
-    })
+        }
+
+        child.addEventListener('mouseup',()=>trigger=false);
+
+    });
 }
 
 // ADD EASTER EGG
