@@ -45,6 +45,10 @@ function colorGrid(){
             mouseButton=null;
         });
 
+        window.addEventListener('mouseup',()=>{
+            mouseButton=null;
+        })
+
         child.addEventListener('mouseover',(e)=>{
             child.style['cursor']="cell";
             if (mouseButton!=null) colorPixel(child,mouseButton);
