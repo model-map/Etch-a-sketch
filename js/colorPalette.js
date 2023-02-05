@@ -290,7 +290,7 @@ colors.forEach((colorDiv)=>{
     colorDiv.addEventListener("click",()=>{
         color=colorDiv.id;
         pickedColor.style['border']=`1px solid rgba(0,0,0,0.25)`;
-        colorDiv.style['border']=`1px solid rgba(0,0,0,1)`;
+        colorDiv.style['border']=`2px solid #000000`;
         pickedColor=colorDiv;
 
     })

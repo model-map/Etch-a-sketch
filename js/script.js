@@ -6,7 +6,7 @@ let mouseButton=null;
 let gridChildren=null;
 
 const canvasSize=[4,8,16,32,64];
-slider.value=0;
+slider.value=1;
 
 // ------------------------------------------------------------------------------
 
@@ -69,7 +69,7 @@ function createGrid(value){
 
 // --------------------------------------------------------
 
-createGrid(4); // Create initial grid when page loads
+createGrid(8); // Create initial grid when page loads
 
 /////////////////// EVENT LISTENERS
 
