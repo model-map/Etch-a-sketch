@@ -3,6 +3,7 @@ const slider=document.querySelector('#slider');
 const container=document.querySelector('.container');
 const slidervalue=document.querySelector('#slidervalue');
 let mouseButton=null;
+let gridChildren=null;
 
 const canvasSize=[4,8,16,32,64];
 slider.value=0;
@@ -16,8 +17,7 @@ function destroyGrid(){
 
 function colorGrid(){
     mouseButton=null;
-    gridChildren=document.querySelectorAll('.gridChild');
-
+    gridChildren=document.querySelectorAll('.gridChild')
     function colorPixel(child,mouseButton){
         switch(mouseButton){
             case null:
@@ -79,3 +79,14 @@ slider.addEventListener('change',(e)=>{
     destroyGrid();
     createGrid(value);
 });
+
+// -------------------------------------------------------
+
+// CLEAR button
+
+const clear=document.querySelector('.clearButton');
+clear.addEventListener("click",()=>{
+    gridChildren.forEach((child)=>{
+        child.style['background-color']=`transparent`;
+    })
+})

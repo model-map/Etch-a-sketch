@@ -1,11 +1,10 @@
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
-</style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
 
 /* DISABLE DRAG */
 
 .container,
-.sidebar{
+.topbar{
     user-drag: none; 
     user-select: none;
     -moz-user-select: none;
@@ -20,6 +19,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+.gridChild{
+    transition: all 0.1s ease-in-out;
 }
 
 /* FLEXBOXES */
@@ -46,28 +49,41 @@ body{
             display:grid;
         }
 
-        .sidebar{
+        .topbar{
             align-self:stretch;
             display:flex;
         }
 
             .canvas-settings{
                 display:flex;
-                flex-direction: column;
+                flex-direction: row;
                 align-self: center;
-                justify-self: center;
+                gap: 30px;
             }
 
 /* DECORATIONS */
 
 body{
     font-family: 'VT323','Press Start 2P', monospace;
-    background-color: #241f31;
-    color: rgb(205, 205, 6);
+    background-color: #141518;
+    color: #ffffff;
 }
 
-    .header{
-        background-color: #171421;
+    .header,
+    .footer{
+        background-color: #333333;
+    }
+
+    .topbar{
+        background-color: #222222;
+    }
+
+    .clearButton{
+        background-color: #ff315a;
+        border-radius: 10%;
+        width: 3vw;
+        height: 3vh;
+        align-self: center;
     }
 
     .mainArea{
@@ -76,18 +92,27 @@ body{
     }
 
         .container{
-            margin-right:auto;
+            margin:auto;
             -webkit-user-drag: none;
         }
 
+        .colorPalette{
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            margin: auto 25px;
+        }
+
             .gridChild{
-                border: 1px solid rgba(255, 255, 255, 0.25);
+                border: 1px solid rgba(255, 255, 255, 0.5);
             }
 
-        .sidebar{
-            background-color: #171421;
+        .topbar{
             border-radius: 2.5%;
-            margin-right:auto;
+            font-size: 18px;
+        }
+
+        .canvas-settings{
+            margin:0 auto;
+            text-align: center;
         }
 
     .footer{
@@ -108,16 +133,20 @@ body{
 }
 
     .header{
-        height: 10vh;
+        height: 4vh;
     }
 
     .footer{
-        height: 10vh;
+        height: 3vh;
     }
 
     .container{
         height: 60vh;
         width: 60vh;
+    }
+
+    .mainArea{
+        height: 80vh;
     }
 
 /* ADD EASTER EGG */

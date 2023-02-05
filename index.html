@@ -15,7 +15,15 @@
 </head>
 <body>
     <div class="header">
-        <h1>RPG Asset Maker</h1>
+        <h1><img src="./assets/logo_heart.png"> RPG ASSET MAKER</h1>
+    </div>
+    <div class="topbar">
+        <div class="canvas-settings">
+            <button class="clearButton">Clear</button>
+            <div>
+                <input type="range" min="0" max="4" step="1" id="slider"> :<span id="slidervalue">4x4</span>
+            </div>
+        </div>
     </div>
     <div class="mainArea">
         <div class="container" oncontextmenu="event.preventDefault();">
@@ -23,13 +31,6 @@
         </div>
         <div class="colorPalette">
             <!-- Color Palette-->
-        </div>
-        <div class="sidebar">
-            <div class="canvas-settings">
-                <input type="range" min="0" max="4" step="1" id="slider">
-                <h3>Select Canvas size</h3>
-                <h4>Canvas size: <span id="slidervalue">4x4</span></h4>
-            </div>
         </div>
     </div>
     <div class="footer">

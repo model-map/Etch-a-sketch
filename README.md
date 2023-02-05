@@ -9,3 +9,6 @@ Credits:
 
         - https://en.wikipedia.org/wiki/List_of_colors:_A%E2%80%93F
         - https://wikitable2csv.ggor.de/
+
+Next Steps:
+    - Add Grid button
