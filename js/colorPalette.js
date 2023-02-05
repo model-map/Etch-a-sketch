@@ -1,4 +1,4 @@
-const colorPalette = [
+const colorPaletteArray = [
     ['#000000', 'Black'],
     ['#000024', 'NavyGreen'],
     ['#000049', 'DarkIndigo'],
@@ -245,4 +245,19 @@ const colorPalette = [
     ['#FFFFFF', 'White']
 ];
 
-console.log(colorPalette[0][0]);
+createPaletteGrid();
+
+function createPaletteGrid(){
+    for (i=0;i<244;i++){
+        const colorHex=colorPaletteArray[i][0];
+        const colorLabel=colorPaletteArray[i][1];
+        const div=document.createElement('div');
+
+        div.classList.add('color');
+        div.setAttribute('id',colorHex);
+        div.setAttribute('title',colorLabel);
+        div.style['background-color']=`${colorHex}`;
+
+        colorPalette.appendChild(div);
+    }
+}

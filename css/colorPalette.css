@@ -1,0 +1,16 @@
+.colorPalette{
+    height: 60vh;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.color{
+    border: 1px solid #00000040;
+    height: 5vh;
+    width: 5vw;
+    position: relative;
+}
+
+.colorPalette::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}

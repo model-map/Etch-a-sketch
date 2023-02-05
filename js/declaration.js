@@ -7,6 +7,7 @@ const slider=document.querySelector('#slider');
 const slidervalue=document.querySelector('#slidervalue');
 const canvasSize=[4,8,16,32,64];
 const colorPicker=document.querySelector('[data-jscolor]');
+const colorPalette=document.querySelector('.colorPalette');
 let color= colorPicker.value;
 
 /* // Body HEIGHT and WIDTH

@@ -61,6 +61,7 @@ body{
 
         .container{
             margin-right:auto;
+            -webkit-user-drag: none;
         }
 
             .gridChild{
