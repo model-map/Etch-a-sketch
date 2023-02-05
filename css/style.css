@@ -1,4 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+</style>
+
+/* DISABLE DRAG */
+
+.container,
+.sidebar{
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+/* ------------------------------------- */
 
 *{
     box-sizing: border-box;
@@ -45,7 +61,7 @@ body{
 /* DECORATIONS */
 
 body{
-    font-family: 'Press Start 2P';
+    font-family: 'VT323','Press Start 2P', monospace;
     background-color: #241f31;
     color: rgb(205, 205, 6);
 }
@@ -75,7 +91,7 @@ body{
         }
 
     .footer{
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
     }
 
 /* HEIGHTS AND WIDTHS */
@@ -91,18 +107,18 @@ body{
     height: 100vh;
 }
 
-.header{
-    height: 10vh;
-}
+    .header{
+        height: 10vh;
+    }
 
-.footer{
-    height: 10vh;
-}
+    .footer{
+        height: 10vh;
+    }
 
-.container{
-    height: 60vh;
-    width: 60vh;
-}
+    .container{
+        height: 60vh;
+        width: 60vh;
+    }
 
 /* ADD EASTER EGG */
 

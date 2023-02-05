@@ -2,6 +2,7 @@ const body=document.querySelector('body');
 const slider=document.querySelector('#slider');
 const container=document.querySelector('.container');
 const slidervalue=document.querySelector('#slidervalue');
+let mouseButton=null;
 
 const canvasSize=[4,8,16,32,64];
 slider.value=0;
@@ -14,7 +15,7 @@ function destroyGrid(){
 }
 
 function colorGrid(){
-    let mouseButton=null;
+    mouseButton=null;
     gridChildren=document.querySelectorAll('.gridChild');
 
     function colorPixel(child,mouseButton){
@@ -28,7 +29,8 @@ function colorGrid(){
 
             case 2:
                 child.classList.remove("gridChild--colored");
-                child.style['background-color']=`${body.style['background-color']}`;
+                /* child.style['background-color']=`${body.style['background-color']}`; */
+                child.style['background-color']=`transparent`;
                 break;
         }
     }
@@ -61,7 +63,7 @@ function createGrid(value){
     colorGrid();
 }
 
-// --------------
+// --------------------------------------------------------
 
 createGrid(4); // Create initial grid when page loads
 
