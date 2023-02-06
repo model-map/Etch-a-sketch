@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 
-
 /* DISABLE DRAG */
 
 .container,
@@ -51,8 +50,7 @@ body{
 
     .mainArea{
         display:flex;
-        flex-direction: row-reverse;
-        justify-content: center;
+        flex-direction: row;
     }
 
         .container{
@@ -62,7 +60,16 @@ body{
         .topbar{
             align-self:stretch;
             display:flex;
+            flex-direction: column;
         }
+
+            .instructions{
+                background-color: #dfdada;
+                width: 100vw;
+                text-align: center;
+                font-size: 25px;
+                display: none;
+            }
 
             .canvas-settings{
                 display:flex;
@@ -102,8 +109,9 @@ body{
     }
 
     .clearButton,
-    .gridButton{
-        border-radius: 10%;
+    .gridButton,
+    .instructionButton{
+        border-radius: 5px;
         align-self: center;
         padding: 5px 10px;
         
@@ -113,19 +121,32 @@ body{
         background-color: #ff315a;
     }
 
+    .instructionButton{
+        background-color: #FFFFA7;
+    }
+
     .mainArea{
         margin: auto;
         gap: 2em;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #containerDialogue{
+        margin: auto;
     }
 
         .container{
-            margin:auto;
+            justify-self: center;
+            align-self: center;
             -webkit-user-drag: none;
+/*             margin: auto; */
+            margin-left:29%;
         }
 
         .colorPalette{
             border: 1px solid rgba(255, 255, 255, 0.5);
-            margin: auto 25px;
+            margin: auto 0;
+
         }
 
             .container,
@@ -177,6 +198,11 @@ body{
 
     .mainArea{
         height: 80vh;
+        width: 100vw;
+    }
+
+    .dialogBox{
+        height: 60vh;
     }
 
 
@@ -190,4 +216,3 @@ body{
     margin-top:auto;
     margin-left:auto;
 }
-

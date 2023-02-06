@@ -110,3 +110,17 @@ gridButton.addEventListener("click",()=>{
         })
     }
 })
+
+// Instruction button
+const instructionsButton=document.querySelector('.instructionButton')
+let instructionsTrigger=false;
+instructionsButton.addEventListener("click",()=>{
+    if (!instructionsTrigger){
+        instructionsTrigger=true;
+        instructions.style['display']="block";
+    }
+    else {
+        instructionsTrigger=false;
+        instructions.style['display']="none";
+    }
+})
