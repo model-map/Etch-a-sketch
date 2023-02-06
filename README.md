@@ -11,6 +11,7 @@ Credits:
         - https://wikitable2csv.ggor.de/
 
 Next Steps:
+
     - Pointers to communicate that the color palette is scrollable, rightclick erases and logo toggles dark/light modes
     - Load mario pixel art on page load
     - Allow saving picture
