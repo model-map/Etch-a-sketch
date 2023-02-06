@@ -11,7 +11,8 @@ Credits:
 
 Next Steps:
 
-    - ColorPalette: Allow a secondary box where user can store upto 60 colors (4x15) for easy access.
     - Right click button: Either erase or secondary color.
     - Allow saving picture
     - Load mario pixel art on page load
+    - Add tools
+    - Clean code, fix margins, make website responsive
