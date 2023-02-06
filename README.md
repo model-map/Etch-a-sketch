@@ -11,5 +11,6 @@ Credits:
 
 Next Steps:
 
-    - Load mario pixel art on page load
+    - Right click button: Either erase or secondary color.
     - Allow saving picture
+    - Load mario pixel art on page load
