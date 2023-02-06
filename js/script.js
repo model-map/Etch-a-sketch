@@ -92,19 +92,19 @@ clearButton.addEventListener("click",()=>{
 });
 
 // Grid button
-let gridTrigger=false;
+let gridTrigger=true;
 const gridButton= document.querySelector('.gridButton');
 gridButton.addEventListener("click",()=>{
-    if (gridTrigger==true){
-        gridTrigger=false;
+    if (gridTrigger==false){
+        gridTrigger=true;
         gridButton.style['background-color']="white";
         gridChildren.forEach((child)=>{
-            child.style['border']=`1px solid rgba(255, 255, 255, 0.5)`;
+            child.style['border']=`1px solid #00000075`;
         })
     }
-    else{
+    else if (gridTrigger==true){
         gridButton.style['background-color']="#777";
-        gridTrigger=true;
+        gridTrigger=false;
         gridChildren.forEach((child)=>{
             child.style['border']="none";
         })

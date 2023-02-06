@@ -1,7 +1,7 @@
-# Etch-a-sketch
+# Pixelrama
 
 Github preview:
-https://htmlpreview.github.io/?https://github.com/model-map/Etch-a-sketch/blob/main/index.html
+https://htmlpreview.github.io/?https://github.com/model-map/Pixelrama/blob/main/index.html
 
 Credits:
 
@@ -11,4 +11,6 @@ Credits:
         - https://wikitable2csv.ggor.de/
 
 Next Steps:
-    - Add Grid button
+
+    - Load mario pixel art on page load
+    - Allow saving picture

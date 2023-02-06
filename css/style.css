@@ -81,17 +81,24 @@ body{
 
 body{
     font-family: 'VT323','Press Start 2P', monospace;
-    background-color: #141518;
-    color: #ffffff;
+    background-color: #F1ECE4;
+    color: #000;
 }
 
     .header,
     .footer{
-        background-color: #333333;
+        background-color: #dfd2c0;
+        border: 1px solid #00000050;
     }
 
     .topbar{
-        background-color: #222222;
+        background-color: #C1A885;
+        border-bottom: 1px solid #00000050;
+
+    }
+
+    .container{
+        background-color: white;
     }
 
     .clearButton,
@@ -120,8 +127,9 @@ body{
             margin: auto 25px;
         }
 
+            .container,
             .gridChild{
-                border: 1px solid rgba(255, 255, 255, 0.5);
+                border: 1px solid #00000075;
             }
 
         .topbar{
@@ -155,6 +163,10 @@ body{
     .footer{
         font-family: monospace;
         height: 3vh;
+    }
+
+    #githubLink{
+        color: black;
     }
 
     .container{
