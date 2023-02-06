@@ -1146,8 +1146,14 @@ colors.forEach((colorDiv)=>{
 
     })
     colorDiv.addEventListener("dblclick",()=>{  // Custom color palette
-        const secondaryColor=colorDiv;
-        colorPaletteStore.appendChild(secondaryColor);
+        if (colorDiv.classList.contains("customPalette")){
+            colorDiv.classList.remove("customPalette");
+            colorPalette.appendChild(colorDiv);
+        }
+        else{
+        colorDiv.classList.add("customPalette");
+        colorPaletteStore.appendChild(colorDiv);
+        }
     })
 })
 
