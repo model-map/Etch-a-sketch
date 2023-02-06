@@ -2,11 +2,26 @@ const body=document.querySelector('body');
 const slider=document.querySelector('#slider');
 const container=document.querySelector('.container');
 const slidervalue=document.querySelector('#slidervalue');
+const fillButton=document.querySelector('.fillButton');
 let mouseButton=null;
 let gridChildren=null;
 
 const canvasSize=[4,8,16,32,64];
 slider.value=1;
+
+
+// Fill button
+let fill=false;
+fillButton.addEventListener("click",()=>{
+    if (fill){
+        fill=false;
+        fillButton.style['background-color']="lightsteelblue";
+    }
+    else{
+        fill=true;
+        fillButton.style['background-color']="steelblue";
+    }
+})
 
 // ------------------------------------------------------------------------------
 
@@ -23,9 +38,17 @@ function colorGrid(){
             case null:
                 break;
             case 0:
+                if (!fill){
                 child.classList.add("gridChild--colored");
                 child.style['background-color']=`${color}`;
                 break;
+                }
+                else{
+                    gridChildren.forEach((child)=>{
+                        child.style['background-color']=`${color}`;
+                    })
+                    break;
+                }
 
             case 2:
                 child.classList.remove("gridChild--colored");

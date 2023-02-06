@@ -110,7 +110,8 @@ body{
 
     .clearButton,
     .gridButton,
-    .instructionButton{
+    .instructionButton,
+    .fillButton{
         border-radius: 5px;
         align-self: center;
         padding: 5px 10px;
@@ -123,6 +124,10 @@ body{
 
     .instructionButton{
         background-color: #FFFFA7;
+    }
+
+    .fillButton{
+        background-color: lightsteelblue;
     }
 
     .mainArea{
