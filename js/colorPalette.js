@@ -1133,8 +1133,10 @@ function createPaletteGrid(){
 }
 
 // COLOUR PICKER
+const colorPaletteStore= document.querySelector('.colorPaletteStore');
 let pickedColor=document.getElementById("#FF1493"); // To highlight selected color in palette
 const colors=document.querySelectorAll('.color');
+
 colors.forEach((colorDiv)=>{
     colorDiv.addEventListener("click",()=>{
         color=colorDiv.id;
@@ -1143,4 +1145,9 @@ colors.forEach((colorDiv)=>{
         pickedColor=colorDiv;
 
     })
+    colorDiv.addEventListener("dblclick",()=>{  // Custom color palette
+        const secondaryColor=colorDiv;
+        colorPaletteStore.appendChild(secondaryColor);
+    })
 })
+

@@ -7,6 +7,7 @@ const gridBoxes=document.querySelectorAll('.gridChild');
 const githubLink=document.getElementById('githubLink');
 const githubLogo=document.getElementById('githubLogo');
 const sliderText=document.getElementById('slidervalue');
+const secondaryColorPalette=document.querySelector('.colorPaletteStore');
 
 let colormode='light';
 logoButton.addEventListener("click",()=>{
@@ -24,6 +25,7 @@ logoButton.addEventListener("click",()=>{
         footer.style['border']=`1px solid #00000050`;
         topbar.style['border-bottom']=`1px solid #00000050`;
         instructions.style['background-color']="#dfdada";
+        secondaryColorPalette.style['border']=`1px solid #00000075`;
 
         topbar.style['color']='#000';
         footer.style['color']=`#000`;
@@ -42,6 +44,7 @@ logoButton.addEventListener("click",()=>{
         footer.style['background-color']='#333';
         topbar.style['background-color']='#222';
         instructions.style['background-color']='#222222'
+        secondaryColorPalette.style['border']=`1px solid #ffffff75`;
 
         topbar.style['color']='#fff';
         footer.style['color']=`#fff`;
