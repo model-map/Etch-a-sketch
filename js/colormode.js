@@ -2,6 +2,7 @@ const logoButton=document.getElementById('logo');
 const header=document.querySelector('.header');
 const topbar=document.querySelector('.topbar');
 const footer=document.querySelector('.footer');
+<<<<<<< HEAD
 const gridBoxes=document.querySelectorAll('.gridChild');
 const githubLink=document.getElementById('githubLink');
 const githubLogo=document.getElementById('githubLogo');
@@ -12,10 +13,28 @@ logoButton.addEventListener("click",()=>{
     if (colormode=='dark'){ // LIGHT MODE SETTINGS
         colormode='light';
         body.style['background-color']='#F1ECE4';
+=======
+
+let colormode='dark';
+logoButton.addEventListener("click",()=>{
+    if (colormode=='light'){
+        colormode='dark';
+        body.style['background-color']='#141518';
+        body.style['color']='#fff';
+        header.style['background-color']='#333';
+        footer.style['background-color']='#333';
+        topbar.style['background-color']='#222';
+        topbar.style['color']='#fff';
+    }
+    else{
+        colormode='light';
+        body.style['background-color']='#D6C5AE';
+>>>>>>> 9e1d159f040551d9da3de0638e20613abdcca553
         body.style['color']='#000';
         header.style['background-color']='#dfd2c0';
         footer.style['background-color']='#dfd2c0';
         topbar.style['background-color']='#C1A885';
+<<<<<<< HEAD
 /*         container.style['border']=`1px solid #00000075`;
         footer.style['color']=`#000`;
         gridBoxes.forEach((box)=>{
@@ -49,4 +68,7 @@ logoButton.addEventListener("click",()=>{
         sliderText.style['color']=`#fff`;
     }
 
+=======
+    }
+>>>>>>> 9e1d159f040551d9da3de0638e20613abdcca553
 })
