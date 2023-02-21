@@ -1,9 +1,12 @@
 # Pixelrama
 
-Github preview:
-https://htmlpreview.github.io/?https://github.com/model-map/Pixelrama/blob/main/index.html
-
-Credits:
+## Live:
+https://model-map.github.io/Pixelrama/
+#
+## Instructions
+![image](https://user-images.githubusercontent.com/118442144/220345891-5aee03d4-5843-4fb5-bbf9-46477006aedc.png)
+#
+## Credits:
 
     - Color Palette
 
