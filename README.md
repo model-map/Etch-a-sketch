@@ -1,4 +1,5 @@
 # Pixelrama
+A pixel art drawing board for your pixel drawing needs :) 
 
 ## Live:
 https://model-map.github.io/Pixelrama/
